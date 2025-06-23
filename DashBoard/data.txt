@@ -1,0 +1,1 @@
+{"result":[{"CityCode":"02","CityArea":null,"Code":"02000001","Toan":"8.00","NguVan":"7.00","NgoaiNgu":"8.20","VatLi":"7.25","HoaHoc":"7.75","SinhHoc":"5.25","KHTN":"6.75","DiaLi":"","LichSu":"","GDCD":"","KHXH":"","ResultGroup":"","Result":""}]}

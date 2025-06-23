@@ -1,0 +1,1614 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='processed+' inline='true' name='federated.0we3k8j0x72gqo15sog920xa0arj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='processed' name='textscan.0vuqiv217smm1y15eijz70280h4i'>
+            <connection class='textscan' directory='C:/FPT Polytechnic/Graduation_Project/Data/Processed' filename='processed.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0vuqiv217smm1y15eijz70280h4i' name='processed.csv' table='[processed#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='sbd' ordinal='0' />
+              <column datatype='real' name='toan' ordinal='1' />
+              <column datatype='real' name='ngu_van' ordinal='2' />
+              <column datatype='real' name='vat_li' ordinal='3' />
+              <column datatype='real' name='hoa_hoc' ordinal='4' />
+              <column datatype='real' name='sinh_hoc' ordinal='5' />
+              <column datatype='real' name='lich_su' ordinal='6' />
+              <column datatype='real' name='dia_li' ordinal='7' />
+              <column datatype='real' name='gdcd' ordinal='8' />
+              <column datatype='real' name='ngoai_ngu' ordinal='9' />
+              <column datatype='integer' name='code' ordinal='10' />
+              <column datatype='integer' name='year' ordinal='11' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0vuqiv217smm1y15eijz70280h4i' name='national_examination_board_transform.csv' table='[national_examination_board_transform#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='code' ordinal='0' />
+              <column datatype='string' name='national examination board' ordinal='1' />
+              <column datatype='string' name='province' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[code (national_examination_board_transform.csv)]' value='[national_examination_board_transform.csv].[code]' />
+          <map key='[code]' value='[processed.csv].[code]' />
+          <map key='[dia_li]' value='[processed.csv].[dia_li]' />
+          <map key='[gdcd]' value='[processed.csv].[gdcd]' />
+          <map key='[hoa_hoc]' value='[processed.csv].[hoa_hoc]' />
+          <map key='[lich_su]' value='[processed.csv].[lich_su]' />
+          <map key='[national examination board]' value='[national_examination_board_transform.csv].[national examination board]' />
+          <map key='[ngoai_ngu]' value='[processed.csv].[ngoai_ngu]' />
+          <map key='[ngu_van]' value='[processed.csv].[ngu_van]' />
+          <map key='[province]' value='[national_examination_board_transform.csv].[province]' />
+          <map key='[sbd]' value='[processed.csv].[sbd]' />
+          <map key='[sinh_hoc]' value='[processed.csv].[sinh_hoc]' />
+          <map key='[toan]' value='[processed.csv].[toan]' />
+          <map key='[vat_li]' value='[processed.csv].[vat_li]' />
+          <map key='[year]' value='[processed.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[national_examination_board_transform.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sbd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sbd]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>sbd</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toan</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[toan]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>toan</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ngu_van</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ngu_van]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>ngu_van</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vat_li</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[vat_li]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>vat_li</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hoa_hoc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[hoa_hoc]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>hoa_hoc</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sinh_hoc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sinh_hoc]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>sinh_hoc</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lich_su</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lich_su]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>lich_su</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_li</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dia_li]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>dia_li</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdcd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdcd]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>gdcd</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ngoai_ngu</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ngoai_ngu]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>ngoai_ngu</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[code]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>code</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[processed.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[code (national_examination_board_transform.csv)]</local-name>
+            <parent-name>[national_examination_board_transform.csv]</parent-name>
+            <remote-alias>code</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>national examination board</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[national examination board]</local-name>
+            <parent-name>[national_examination_board_transform.csv]</parent-name>
+            <remote-alias>national examination board</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>province</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[province]</local-name>
+            <parent-name>[national_examination_board_transform.csv]</parent-name>
+            <remote-alias>province</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' datatype='integer' name='[Dia Li (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[dia_li]' peg='0' size='0.82' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Gdcd (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[gdcd]' peg='0' size='0.85' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Hoa Hoc (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[hoa_hoc]' peg='0' size='0.81' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Lich Su (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[lich_su]' peg='0' size='0.78' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Ngoai Ngu (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[ngoai_ngu]' peg='0' size='0.76' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Ngu Van (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[ngu_van]' peg='0' size='0.54' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Sinh Hoc (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[sinh_hoc]' peg='0' size='0.79' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Toan (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[toan]' peg='0' size='0.74' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Vat Li (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[vat_li]' peg='0' size='0.81' />
+      </column>
+      <column caption='national_examination_board_transform.csv' datatype='table' name='[__tableau_internal_object_id__].[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]' role='measure' type='quantitative' />
+      <column caption='processed.csv' datatype='table' name='[__tableau_internal_object_id__].[processed.csv_7EF33E1501654143A87354EC52D9EA89]' role='measure' type='quantitative' />
+      <column caption='Code (National Examination Board Transform.Csv)' datatype='integer' name='[code (national_examination_board_transform.csv)]' role='dimension' type='ordinal' />
+      <column caption='Code' datatype='integer' name='[code]' role='dimension' type='ordinal' />
+      <column caption='Dia Li' datatype='real' name='[dia_li]' role='measure' type='quantitative' />
+      <column caption='Gdcd' datatype='real' name='[gdcd]' role='measure' type='quantitative' />
+      <column caption='Hoa Hoc' datatype='real' name='[hoa_hoc]' role='measure' type='quantitative' />
+      <column caption='Lich Su' datatype='real' name='[lich_su]' role='measure' type='quantitative' />
+      <column caption='National Examination Board' datatype='string' name='[national examination board]' role='dimension' type='nominal' />
+      <column caption='Ngoai Ngu' datatype='real' name='[ngoai_ngu]' role='measure' type='quantitative' />
+      <column caption='Ngu Van' datatype='real' name='[ngu_van]' role='measure' type='quantitative' />
+      <column caption='Province' datatype='string' name='[province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Sbd' datatype='integer' name='[sbd]' role='measure' type='quantitative' />
+      <column caption='Sinh Hoc' datatype='real' name='[sinh_hoc]' role='measure' type='quantitative' />
+      <column caption='Toan' datatype='real' name='[toan]' role='measure' type='quantitative' />
+      <column caption='Vat Li' datatype='real' name='[vat_li]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[hoa_hoc]' derivation='Avg' name='[avg:hoa_hoc:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[lich_su]' derivation='Avg' name='[avg:lich_su:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngoai_ngu]' derivation='Avg' name='[avg:ngoai_ngu:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngu_van]' derivation='Avg' name='[avg:ngu_van:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[toan]' derivation='Avg' name='[avg:toan:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[hoa_hoc]' derivation='Count' name='[cnt:hoa_hoc:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[lich_su]' derivation='Count' name='[cnt:lich_su:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngoai_ngu]' derivation='Count' name='[cnt:ngoai_ngu:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngu_van]' derivation='Count' name='[cnt:ngu_van:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[toan]' derivation='Count' name='[cnt:toan:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gdcd]' derivation='Sum' name='[sum:gdcd:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[hoa_hoc]' derivation='Sum' name='[sum:hoa_hoc:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[lich_su]' derivation='Sum' name='[sum:lich_su:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngoai_ngu]' derivation='Sum' name='[sum:ngoai_ngu:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ngu_van]' derivation='Sum' name='[sum:ngu_van:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[toan]' derivation='Sum' name='[sum:toan:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PHIHUY~1/AppData/Local/Temp/TableauTemp/#TableauTemp_132hljs0b0sf360zxgn3116z52c6.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/13/2025 10:58:14 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='processed.csv_7EF33E1501654143A87354EC52D9EA89' table='[Extract].[processed.csv_7EF33E1501654143A87354EC52D9EA89]' type='table' />
+            <relation name='national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC' table='[Extract].[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]' type='table' />
+          </relation>
+          <cols>
+            <map key='[code (national_examination_board_transform.csv)]' value='[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC].[code]' />
+            <map key='[code]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[code]' />
+            <map key='[dia_li]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[dia_li]' />
+            <map key='[gdcd]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[gdcd]' />
+            <map key='[hoa_hoc]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[hoa_hoc]' />
+            <map key='[lich_su]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[lich_su]' />
+            <map key='[national examination board]' value='[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC].[national examination board]' />
+            <map key='[ngoai_ngu]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[ngoai_ngu]' />
+            <map key='[ngu_van]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[ngu_van]' />
+            <map key='[province]' value='[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC].[province]' />
+            <map key='[sbd]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[sbd]' />
+            <map key='[sinh_hoc]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[sinh_hoc]' />
+            <map key='[toan]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[toan]' />
+            <map key='[vat_li]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[vat_li]' />
+            <map key='[year]' value='[processed.csv_7EF33E1501654143A87354EC52D9EA89].[year]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>sbd</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sbd]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>sbd</remote-alias>
+              <ordinal>0</ordinal>
+              <family>processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2344450</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>toan</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[toan]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>toan</remote-alias>
+              <ordinal>1</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>61</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ngu_van</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ngu_van]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>ngu_van</remote-alias>
+              <ordinal>2</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>120</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vat_li</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[vat_li]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>vat_li</remote-alias>
+              <ordinal>3</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hoa_hoc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hoa_hoc]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>hoa_hoc</remote-alias>
+              <ordinal>4</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sinh_hoc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sinh_hoc]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>sinh_hoc</remote-alias>
+              <ordinal>5</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lich_su</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lich_su]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>lich_su</remote-alias>
+              <ordinal>6</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_li</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dia_li]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>dia_li</remote-alias>
+              <ordinal>7</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gdcd</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gdcd]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>gdcd</remote-alias>
+              <ordinal>8</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ngoai_ngu</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ngoai_ngu]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>ngoai_ngu</remote-alias>
+              <ordinal>9</ordinal>
+              <family>processed.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[code]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>code</remote-alias>
+              <ordinal>10</ordinal>
+              <family>processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>67</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>11</ordinal>
+              <family>processed.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[processed.csv_7EF33E1501654143A87354EC52D9EA89]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[code (national_examination_board_transform.csv)]</local-name>
+              <parent-name>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</parent-name>
+              <remote-alias>code</remote-alias>
+              <ordinal>12</ordinal>
+              <family>national_examination_board_transform.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>national examination board</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[national examination board]</local-name>
+              <parent-name>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</parent-name>
+              <remote-alias>national examination board</remote-alias>
+              <ordinal>13</ordinal>
+              <family>national_examination_board_transform.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>province</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[province]</local-name>
+              <parent-name>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</parent-name>
+              <remote-alias>province</remote-alias>
+              <ordinal>14</ordinal>
+              <family>national_examination_board_transform.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[avg:ngoai_ngu:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[avg:toan:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngoai_ngu:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:toan:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:Calculation_1805380521301090304:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:ngoai_ngu:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:toan:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:lich_su:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[avg:ngu_van:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngu_van:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:ngu_van:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[avg:lich_su:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:lich_su:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:ngu_van:qk]:1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[avg:hoa_hoc:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:hoa_hoc:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:gdcd:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:hoa_hoc:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='national_examination_board_transform.csv' id='national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC'>
+            <properties context=''>
+              <relation connection='textscan.0vuqiv217smm1y15eijz70280h4i' name='national_examination_board_transform.csv' table='[national_examination_board_transform#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='code' ordinal='0' />
+                  <column datatype='string' name='national examination board' ordinal='1' />
+                  <column datatype='string' name='province' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC' table='[Extract].[national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC]' type='table' />
+            </properties>
+          </object>
+          <object caption='processed.csv' id='processed.csv_7EF33E1501654143A87354EC52D9EA89'>
+            <properties context=''>
+              <relation connection='textscan.0vuqiv217smm1y15eijz70280h4i' name='processed.csv' table='[processed#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='sbd' ordinal='0' />
+                  <column datatype='real' name='toan' ordinal='1' />
+                  <column datatype='real' name='ngu_van' ordinal='2' />
+                  <column datatype='real' name='vat_li' ordinal='3' />
+                  <column datatype='real' name='hoa_hoc' ordinal='4' />
+                  <column datatype='real' name='sinh_hoc' ordinal='5' />
+                  <column datatype='real' name='lich_su' ordinal='6' />
+                  <column datatype='real' name='dia_li' ordinal='7' />
+                  <column datatype='real' name='gdcd' ordinal='8' />
+                  <column datatype='real' name='ngoai_ngu' ordinal='9' />
+                  <column datatype='integer' name='code' ordinal='10' />
+                  <column datatype='integer' name='year' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='processed.csv_7EF33E1501654143A87354EC52D9EA89' table='[Extract].[processed.csv_7EF33E1501654143A87354EC52D9EA89]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[code]' />
+              <expression op='[code (national_examination_board_transform.csv)]' />
+            </expression>
+            <first-end-point object-id='processed.csv_7EF33E1501654143A87354EC52D9EA89' />
+            <second-end-point object-id='national_examination_board_transform.csv_512A8406DF2C4FC29C43C7E78222DBDC' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Histogram GDCD'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Gdcd (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[gdcd]' peg='0' size='0.85' />
+            </column>
+            <column-instance column='[gdcd]' derivation='Count' name='[cnt:gdcd:qk]' pivot='key' type='quantitative' />
+            <column caption='Gdcd' datatype='real' name='[gdcd]' role='measure' type='quantitative' />
+            <column-instance column='[Gdcd (bin)]' derivation='None' name='[none:Gdcd (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:gdcd:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:gdcd:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:gdcd:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Gdcd (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Gdcd (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{9DF92985-F461-4DAD-8CF3-CAF3A3ED9D00}' />
+    </worksheet>
+    <worksheet name='Histogram Hóa Học'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Hoa Hoc (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[hoa_hoc]' peg='0' size='0.81' />
+            </column>
+            <column-instance column='[hoa_hoc]' derivation='Count' name='[cnt:hoa_hoc:qk]' pivot='key' type='quantitative' />
+            <column caption='Hoa Hoc' datatype='real' name='[hoa_hoc]' role='measure' type='quantitative' />
+            <column-instance column='[Hoa Hoc (bin)]' derivation='None' name='[none:Hoa Hoc (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:hoa_hoc:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:hoa_hoc:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:hoa_hoc:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Hoa Hoc (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Hoa Hoc (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{589915F6-DEBA-4A5A-9032-A73FF86C2249}' />
+    </worksheet>
+    <worksheet name='Histogram Lịch Sử'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Lich Su (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[lich_su]' peg='0' size='0.78' />
+            </column>
+            <column-instance column='[lich_su]' derivation='Count' name='[cnt:lich_su:qk]' pivot='key' type='quantitative' />
+            <column caption='Lich Su' datatype='real' name='[lich_su]' role='measure' type='quantitative' />
+            <column-instance column='[Lich Su (bin)]' derivation='None' name='[none:Lich Su (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:lich_su:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:lich_su:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:lich_su:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Lich Su (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Lich Su (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{C94AA858-791D-4093-9379-0D811C406E1C}' />
+    </worksheet>
+    <worksheet name='Histogram Ngoại Ngữ'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Ngoai Ngu (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[ngoai_ngu]' peg='0' size='0.76' />
+            </column>
+            <column-instance column='[ngoai_ngu]' derivation='Count' name='[cnt:ngoai_ngu:qk]' pivot='key' type='quantitative' />
+            <column caption='Ngoai Ngu' datatype='real' name='[ngoai_ngu]' role='measure' type='quantitative' />
+            <column-instance column='[Ngoai Ngu (bin)]' derivation='None' name='[none:Ngoai Ngu (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngoai_ngu:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngoai_ngu:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngoai_ngu:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Ngoai Ngu (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Ngoai Ngu (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{D58CB6A8-5C8D-478F-A4A0-1D2BE87D27D0}' />
+    </worksheet>
+    <worksheet name='Histogram Ngữ Văn'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Ngu Van (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[ngu_van]' peg='0' size='0.54' />
+            </column>
+            <column-instance column='[ngu_van]' derivation='Count' name='[cnt:ngu_van:qk]' pivot='key' type='quantitative' />
+            <column caption='Ngu Van' datatype='real' name='[ngu_van]' role='measure' type='quantitative' />
+            <column-instance column='[Ngu Van (bin)]' derivation='None' name='[none:Ngu Van (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngu_van:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngu_van:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngu_van:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Ngu Van (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Ngu Van (bin):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{08F7D7EC-A56A-42C5-BD7B-37EA2B0F02EE}' />
+    </worksheet>
+    <worksheet name='Histogram SInh Học'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Sinh Hoc (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[sinh_hoc]' peg='0' size='0.79' />
+            </column>
+            <column-instance column='[sinh_hoc]' derivation='Count' name='[cnt:sinh_hoc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sinh Hoc (bin)]' derivation='None' name='[none:Sinh Hoc (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Sinh Hoc' datatype='real' name='[sinh_hoc]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:sinh_hoc:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:sinh_hoc:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:sinh_hoc:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Sinh Hoc (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Sinh Hoc (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{75AF1261-A65A-4878-8E05-DA63FB757B11}' />
+    </worksheet>
+    <worksheet name='Histogram Toán'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Toan (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[toan]' peg='0' size='0.74' />
+            </column>
+            <column-instance column='[toan]' derivation='Count' name='[cnt:toan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Toan (bin)]' derivation='None' name='[none:Toan (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Toan' datatype='real' name='[toan]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:toan:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:toan:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:toan:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Toan (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Toan (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{01805DC5-342E-44F7-9142-B8DD6BA76E44}' />
+    </worksheet>
+    <worksheet name='Histogram Vật Lý'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Vat Li (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[vat_li]' peg='0' size='0.81' />
+            </column>
+            <column-instance column='[vat_li]' derivation='Count' name='[cnt:vat_li:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vat Li (bin)]' derivation='None' name='[none:Vat Li (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Vat Li' datatype='real' name='[vat_li]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:vat_li:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:vat_li:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:vat_li:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Vat Li (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[Vat Li (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{74E973A5-018C-437A-A5C1-DC7429EC0342}' />
+    </worksheet>
+    <worksheet name='Histogram Địa Lý'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column aggregation='None' datatype='integer' name='[Dia Li (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[dia_li]' peg='0' size='0.82' />
+            </column>
+            <column-instance column='[dia_li]' derivation='Count' name='[cnt:dia_li:qk]' pivot='key' type='quantitative' />
+            <column caption='Dia Li' datatype='real' name='[dia_li]' role='measure' type='quantitative' />
+            <column-instance column='[Dia Li (bin)]' derivation='None' name='[none:Dia Li (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:dia_li:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:dia_li:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:dia_li:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Dia Li (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:Dia Li (bin):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{BDFCE53D-1CB4-49DB-A07E-9A1B9330164E}' />
+    </worksheet>
+    <worksheet name='Số lượng thí sinh từng năm'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='17'>Số lượng thí sinh từng năm</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column-instance column='[code]' derivation='Count' name='[cnt:code:qk]' pivot='key' type='quantitative' />
+            <column caption='Code' datatype='integer' name='[code]' role='dimension' type='ordinal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:code:qk]' scope='rows' value='Số lượng thí sinh' />
+            <format attr='title' class='0' field='[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]' scope='cols' value='Năm' />
+            <encoding attr='space' class='0' field='[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]' field-type='quantitative' max='2024' min='2020' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:code:qk]' field-type='quantitative' max='1140865' min='800000' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]' />
+              <text column='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:code:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:code:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{C6F6D517-800D-4C07-AFE0-1F8A93B74AD3}' />
+    </worksheet>
+    <worksheet name='Trung Bình Các Môn'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='processed+' name='federated.0we3k8j0x72gqo15sog920xa0arj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0we3k8j0x72gqo15sog920xa0arj'>
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[toan]' derivation='Sum' name='[sum:toan:qk]' pivot='key' type='quantitative' />
+            <column caption='Toan' datatype='real' name='[toan]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0we3k8j0x72gqo15sog920xa0arj].[sum:toan:qk]</rows>
+        <cols>[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{9AFF2414-26AD-400B-BA3C-5026A2378B86}' />
+    </worksheet>
+    <worksheet name='Tỷ Lệ Tăng Trưởng'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C2FFE730-EE7A-4D04-AE55-8AFC4A5DDCC0}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Số lượng thí sinh từng năm'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[none:year:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{1590FC09-A7EB-4F31-BD99-B0ABAEC879FD}' />
+    </window>
+    <window class='worksheet' name='Tỷ Lệ Tăng Trưởng'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{3A6D1C11-A942-483C-A576-7B20FAD3776A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Trung Bình Các Môn'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{2D3E2392-EE82-480B-9CC4-FA20441FD429}' />
+    </window>
+    <window class='worksheet' name='Histogram Toán'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='172'>
+            <card pane-specification-id='3' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:toan:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CF774D01-033C-47F9-9D57-30308F34944F}' />
+    </window>
+    <window class='worksheet' name='Histogram Ngữ Văn'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngu_van:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AE6B104F-5FE1-4B08-8597-F15624450D43}' />
+    </window>
+    <window class='worksheet' name='Histogram Ngoại Ngữ'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:ngoai_ngu:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BA064323-E2C7-4872-854D-668028C93F34}' />
+    </window>
+    <window class='worksheet' name='Histogram Vật Lý'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:vat_li:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{707DC997-9052-461B-8709-238E65C79619}' />
+    </window>
+    <window class='worksheet' name='Histogram Hóa Học'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:hoa_hoc:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6F8CD7FF-6E36-4C56-9E46-806E3CF5B1F0}' />
+    </window>
+    <window class='worksheet' name='Histogram SInh Học'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:sinh_hoc:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{171AF797-3228-49A1-B667-4A26AF006F23}' />
+    </window>
+    <window class='worksheet' name='Histogram Lịch Sử'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:lich_su:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{46BFFA5A-F8BD-4335-8288-C3F36E4735D6}' />
+    </window>
+    <window class='worksheet' name='Histogram Địa Lý'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:dia_li:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5FF856EC-A2D0-48F6-B789-41D78A412A3C}' />
+    </window>
+    <window class='worksheet' name='Histogram GDCD'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0we3k8j0x72gqo15sog920xa0arj].[cnt:gdcd:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{251455A2-551D-45FF-B8FA-33F82391C173}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Trung Bình Các Môn' width='192'>
+      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
+      iO+mAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
