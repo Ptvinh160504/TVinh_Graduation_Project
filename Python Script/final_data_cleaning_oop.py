@@ -1,12 +1,12 @@
 import pandas as pd
 
 file_list = [
-    r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_2020_2021.csv',
-    r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_thpt_2022.csv',
-    r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_thpt_2023.csv',
-    r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_thpt_2024.csv' 
+    r'C:\Users\hason\Documents\FPT\DATN\Data\diem_thi_2020_2021.csv',
+    r'C:\Users\hason\Documents\FPT\DATN\Datadiem_thi_thpt_2022.csv',
+    r'C:\Users\hason\Documents\FPT\DATN\Data\diem_thi_thpt_2023.csv',
+    r'C:\Users\hason\Documents\FPT\DATN\Data\diem_thi_thpt_2024.csv' 
 ]
-df_national_examination_board = pd.read_excel(r"C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\danh_sach_hoi_dong_thi.xlsx")
+df_national_examination_board = pd.read_excel(r"C:\Users\hason\Documents\FPT\DATN\Data\danh_sach_hoi_dong_thi.xlsx")
 
 class NationalHighSchoolExamScore:
     def __init__(self, file_paths,df_national_examination_board):
@@ -179,8 +179,8 @@ def main():
     "Tên Tỉnh": "province"
     }, inplace=True)
 
-    df_national_examination_board.to_csv(r"C:\FPT Polytechnic\Graduation_Project\Data\Processed\national_examination_board_transform.csv", index=False)
-    df_national_examination_board_transform = pd.read_csv(r"C:\FPT Polytechnic\Graduation_Project\Data\Processed\national_examination_board_transform.csv")
+    df_national_examination_board.to_csv(r"C:\Users\hason\Documents\FPT\DATN\final\national_examination_board_transform.csv", index=False)
+    df_national_examination_board_transform = pd.read_csv(r"C:\Users\hason\Documents\FPT\DATN\final\national_examination_board_transform.csv")
     df_national_examination_board_transform.info()
     df_national_high_school_exam_score.info()
 
