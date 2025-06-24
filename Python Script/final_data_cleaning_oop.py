@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-
 file_list = [
     r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_2020_2021.csv',
     r'C:\FPT Polytechnic\Project Tự Làm\Điểm thi thpt 2020 - 2024\diem_thi_thpt_2022.csv',
@@ -84,7 +83,7 @@ class NationalHighSchoolExamScore:
         for i, (path, df) in enumerate(self.dataframes):
             print(f"\nProcessing file: {path}")
 
-            # Thêm cột 'code' nếu chưa có
+            # Add column 'code' if not present
             if 'code' not in df.columns:
                 if 'sbd' in df.columns:
                     try:
@@ -97,12 +96,12 @@ class NationalHighSchoolExamScore:
             else:
                 print("'code' already exists.")
 
-            # Thêm cột 'year' nếu chưa có
+            # Add column 'year' if not present
             if 'year' not in df.columns:
                 df['year'] = start_year + i
                 print(f"Added column 'year' = {start_year + i}")
 
-            # Thêm cột 'khtn'
+            # Add column 'khtn'
             cols_khtn = ['vat_li', 'hoa_hoc', 'sinh_hoc']
             if all(col in df.columns for col in cols_khtn):
                 df['khtn'] = df[cols_khtn].sum(axis=1)
@@ -111,7 +110,7 @@ class NationalHighSchoolExamScore:
             else:
                 print(f"Missing KHTN columns: {', '.join([col for col in cols_khtn if col not in df.columns])}")
 
-            # Thêm cột 'khxh'
+            # Add column 'khxh'
             cols_khxh = ['lich_su', 'dia_li', 'gdcd']
             if all(col in df.columns for col in cols_khxh):
                 df['khxh'] = df[cols_khxh].sum(axis=1)
@@ -120,7 +119,43 @@ class NationalHighSchoolExamScore:
             else:
                 print(f"Missing KHXH columns: {', '.join([col for col in cols_khxh if col not in df.columns])}")
 
-            # Cập nhật lại
+            # Add column group A = toan + vat_li + hoa_hoc
+            khoi_a = ['toan', 'vat_li', 'hoa_hoc']
+            if all(col in df.columns for col in khoi_a):
+                df['khoi_a'] = df[khoi_a].sum(axis=1)
+                df['khoi_a'] = df['khoi_a'].where(df[khoi_a].notnull().all(axis=1))
+                print("Added column 'khoi_a'")
+            else:
+                print(f"Missing Khối A columns: {', '.join([col for col in khoi_a if col not in df.columns])}")
+
+            # Add group B = toan + hoa_hoc + sinh_hoc
+            khoi_b = ['toan', 'hoa_hoc', 'sinh_hoc']
+            if all(col in df.columns for col in khoi_b):
+                df['khoi_b'] = df[khoi_b].sum(axis=1)
+                df['khoi_b'] = df['khoi_b'].where(df[khoi_b].notnull().all(axis=1))
+                print("Added column 'khoi_b'")
+            else:
+                print(f"Missing Khối B columns: {', '.join([col for col in khoi_b if col not in df.columns])}")
+
+            # Add group C = ngu_van + lich_su + dia_li
+            khoi_c = ['ngu_van', 'lich_su', 'dia_li']
+            if all(col in df.columns for col in khoi_c):
+                df['khoi_c'] = df[khoi_c].sum(axis=1)
+                df['khoi_c'] = df['khoi_c'].where(df[khoi_c].notnull().all(axis=1))
+                print("Added column 'khoi_c'")
+            else:
+                print(f"Missing Khối C columns: {', '.join([col for col in khoi_c if col not in df.columns])}")
+
+            # Add group D = toan + ngu_van + ngoai_ngu
+            khoi_d = ['toan', 'ngu_van', 'ngoai_ngu']
+            if all(col in df.columns for col in khoi_d):
+                df['khoi_d'] = df[khoi_d].sum(axis=1)
+                df['khoi_d'] = df['khoi_d'].where(df[khoi_d].notnull().all(axis=1))
+                print("Added column 'khoi_d'")
+            else:
+                print(f"Missing Khối D columns: {', '.join([col for col in khoi_d if col not in df.columns])}")
+
+            # Update dataframe back to list
             self.dataframes[i] = (path, df)
 
 
@@ -139,8 +174,8 @@ class NationalHighSchoolExamScore:
 
             desired_order = [
                 'sbd', 'toan', 'ngu_van', 'vat_li', 'hoa_hoc', 'sinh_hoc',
-                'lich_su', 'dia_li', 'gdcd', 'ngoai_ngu','code', 'khtn',
-                'khxh', 'year'
+                'lich_su', 'dia_li', 'gdcd', 'ngoai_ngu', 'khtn','khxh', 
+                'khoi_a', 'khoi_b', 'khoi_c', 'khoi_d','code', 'year'
             ]
 
             for i, (path, df) in enumerate(self.dataframes):
@@ -166,6 +201,8 @@ class NationalHighSchoolExamScore:
         except Exception as e:
             print(f"Error during concatenation: {e}")
             return None
+
+
 
 
 
